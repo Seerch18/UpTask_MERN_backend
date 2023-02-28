@@ -20,6 +20,7 @@ const whitelist = [process.env.FRONTEND_URL_1, process.env.FRONTEND_URL_2];
 const corsOptions = {
   origin: function (origin, callback) {
     console.log(origin);
+    console.log(whitelist);
     if (whitelist.includes(origin)) {
       callback(null, true);
     } else {
